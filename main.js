@@ -26,7 +26,7 @@ function showTodo(status) {
                        </li>`;
             }
         });
-        todoList.innerHTML = li || `<span> You don't have any task here.`;
+        todoList.innerHTML = li || `<span class="show"> You don't have any task here. </span>`;
     }
 }
 showTodo("all");
