@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+}
+
+.container{
+    margin: 100px auto;
+    max-width: 480px;
+    width: 100%;
+    padding: 25px;
+}
+
+.container .toDo h2{
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.container .toDo .ip{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    width: 90%;
+    margin: 25px auto;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 1px solid black;
+}
+
+.container .toDo .ip input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+}
+
+.container .toDo .ip button{
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 100%;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: auto;
+    color: white;
+    background-color: black;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    cursor: pointer;
+}
+
+.container .control{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.container .control span{
+    font-size: 15px;
+    font-family: Poppins;
+    margin-right: 12px;
+    cursor: pointer;
+    padding-left: 2px;
+}
+
+.control .status span.active{
+    font-weight: 600;
+}
+
+.container .control button{
+    border: none;
+    outline: none;
+    width: 75px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: auto;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.container .list{
+    width: 90%;
+    max-height: 225px;
+    align-items: center;
+    margin: 12px auto;
+    overflow-y: auto;
+}
+
+.container .list li{
+    background-color: black;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    padding-left: 40px;
+    font-family: sans-serif;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+.container .list li::before{
+    content: '';
+    position: absolute;
+    background-image: url(./uncheck.png);
+    background-size: cover;
+    background-position: center;
+    height: 19px;
+    width: 19px;
+    border-radius: 100%;
+    top: 10px;
+    left: 10px;
+}
+
+.container .list .checked{
+    color: rgb(190, 190, 190);
+    text-decoration: line-through;
+}
+
+.container .list .checked::before{
+    background-image: url(./check.png);
+}
+
+
+.container .list .edit{
+    position: absolute;
+    right: -60px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .list li:hover .edit{
+    right: 60px;
+}
+
+.container .list li .trash{
+    position: absolute;
+    right: -45px;
+    width: 45px;
+    text-align: center;
+    background: rgb(186, 12, 12);
+    border-radius: 3px;
+    cursor: pointer;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    transition: all 0.3s ease;
+}
+
+.container .list li:hover .trash{
+    right: 0px;
+}
